@@ -45,8 +45,22 @@
             >Destinations</a
           >
           <a href="#booking" class="hover:text-blue-400 transition">Booking</a>
+          <div
+            id="userProfile"
+            class="hidden flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full border border-white/20"
+          >
+            <i class="fas fa-user-circle text-blue-400"></i>
+            <span id="userNameDisplay" class="text-sm"></span>
+            <button
+              onclick="logout()"
+              class="ml-2 text-xs text-red-400 hover:text-red-300"
+            >
+              Logout
+            </button>
+          </div>
           <a
             href="contact.html"
+            id="contactBtn"
             class="px-5 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition"
             >Contact Us</a
           >

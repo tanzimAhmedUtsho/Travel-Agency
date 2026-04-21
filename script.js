@@ -1,6 +1,27 @@
 // Set current year in footer
 document.getElementById("year").textContent = new Date().getFullYear();
 
+// Check Login Status Global
+function checkLogin() {
+  const user = localStorage.getItem("tanzimUser");
+  const profile = document.getElementById("userProfile");
+  const nameDisp = document.getElementById("userNameDisplay");
+  const contactBtn = document.getElementById("contactBtn");
+
+  if (user && profile && nameDisp) {
+    profile.classList.remove("hidden");
+    nameDisp.textContent = user;
+    if (contactBtn) contactBtn.classList.add("hidden");
+  }
+}
+
+function logout() {
+  localStorage.removeItem("tanzimUser");
+  location.reload();
+}
+
+window.addEventListener("DOMContentLoaded", checkLogin);
+
 // Navbar Scroll Effect
 window.addEventListener("scroll", () => {
   const nav = document.getElementById("mainNav");
