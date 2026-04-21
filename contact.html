@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Tanzim Travels</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .glass {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-950 text-white font-sans">
+    <!-- Navbar -->
+    <nav
+      class="fixed w-full z-50 transition-all duration-300 py-4 bg-gray-950/80 backdrop-blur-md border-b border-white/10"
+      id="mainNav"
+    >
+      <div class="container mx-auto px-6 flex justify-between items-center">
+        <a
+          href="index.html"
+          class="text-2xl font-bold tracking-tighter flex items-center gap-2"
+        >
+          <i class="fas fa-paper-plane text-blue-500"></i>
+          TANZIM TRAVELS
+        </a>
+        <div class="hidden md:flex space-x-8 font-medium">
+          <a href="index.html" class="hover:text-blue-400 transition">Home</a>
+          <a href="air-tickets.html" class="hover:text-blue-400 transition"
+            >Air Tickets</a
+          >
+          <a href="index.html#services" class="hover:text-blue-400 transition"
+            >Services</a
+          >
+          <a
+            href="index.html#destinations"
+            class="hover:text-blue-400 transition"
+            >Destinations</a
+          >
+          <a href="contact.html" class="text-blue-500">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Contact Hero Section -->
+    <section class="pt-32 pb-20 px-6">
+      <div class="container mx-auto text-center">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-4">
+          Get In <span class="text-blue-600">Touch</span>
+        </h1>
+        <p class="text-gray-400 max-w-2xl mx-auto">
+          Have questions? Tanzim Ahmed Utsho and his team are here to help you
+          plan your next perfect journey.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="pb-24 px-6">
+      <div class="container mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
+          <!-- Contact Info Cards -->
+          <div class="space-y-6">
+            <div
+              class="glass p-8 rounded-3xl group hover:border-blue-500/50 transition duration-500"
+            >
+              <div
+                class="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition"
+              >
+                <i class="fas fa-envelope text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Email Us</h3>
+              <p class="text-gray-400">info@tanzimtravels.com</p>
+              <p class="text-gray-400">support@tanzim.com</p>
+            </div>
+
+            <div
+              class="glass p-8 rounded-3xl group hover:border-blue-500/50 transition duration-500"
+            >
+              <div
+                class="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition"
+              >
+                <i class="fas fa-phone text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Call Us</h3>
+              <p class="text-gray-400">+880 1756 467670</p>
+              <p class="text-gray-400">+880 1766 298210</p>
+            </div>
+
+            <div
+              class="glass p-8 rounded-3xl group hover:border-blue-500/50 transition duration-500"
+            >
+              <div
+                class="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition"
+              >
+                <i class="fas fa-location-dot text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Visit Us</h3>
+              <p class="text-gray-400">Dhaka, Bangladesh</p>
+              <p class="text-gray-400">Head Office: Tanzim Towers</p>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="lg:col-span-2">
+            <div class="glass p-10 rounded-3xl">
+              <form
+                id="contactPageForm"
+                class="grid grid-cols-1 md:grid-cols-2 gap-6"
+              >
+                <div class="space-y-2">
+                  <label class="text-sm font-semibold ml-1">Your Name</label>
+                  <input
+                    type="text"
+                    placeholder="Tanzim Ahmed Utsho"
+                    class="w-full px-5 py-4 rounded-2xl bg-white/5 border border-white/10 focus:ring-2 focus:ring-blue-600 outline-none transition"
+                    required
+                  />
+                </div>
+                <div class="space-y-2">
+                  <label class="text-sm font-semibold ml-1"
+                    >Email Address</label
+                  >
+                  <input
+                    type="email"
+                    placeholder="example@mail.com"
+                    class="w-full px-5 py-4 rounded-2xl bg-white/5 border border-white/10 focus:ring-2 focus:ring-blue-600 outline-none transition"
+                    required
+                  />
+                </div>
+                <div class="md:col-span-2 space-y-2">
+                  <label class="text-sm font-semibold ml-1">Subject</label>
+                  <input
+                    type="text"
+                    placeholder="How can we help?"
+                    class="w-full px-5 py-4 rounded-2xl bg-white/5 border border-white/10 focus:ring-2 focus:ring-blue-600 outline-none transition"
+                    required
+                  />
+                </div>
+                <div class="md:col-span-2 space-y-2">
+                  <label class="text-sm font-semibold ml-1">Message</label>
+                  <textarea
+                    rows="5"
+                    placeholder="Write your message here..."
+                    class="w-full px-5 py-4 rounded-2xl bg-white/5 border border-white/10 focus:ring-2 focus:ring-blue-600 outline-none transition resize-none"
+                    required
+                  ></textarea>
+                </div>
+                <div class="md:col-span-2">
+                  <button
+                    type="submit"
+                    class="w-full bg-blue-600 text-white font-bold py-5 rounded-2xl hover:bg-blue-700 transition transform hover:scale-[1.01] shadow-xl shadow-blue-600/20"
+                  >
+                    Send Message <i class="fas fa-paper-plane ml-2"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 py-12">
+      <div class="container mx-auto px-6 text-center text-gray-500">
+        <p>&copy; 2024 Tanzim Travels. Built with ❤️ by Tanzim Ahmed Utsho.</p>
+      </div>
+    </footer>
+
+    <script>
+      document
+        .getElementById("contactPageForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert(
+            "Thank you Tanzim! Your message has been received. Our team will contact you soon.",
+          );
+          this.reset();
+        });
+    </script>
+  </body>
+</html>
