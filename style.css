@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.hero-gradient {
+  background:
+    linear-gradient(rgba(10, 10, 20, 0.7), rgba(10, 10, 20, 0.7)),
+    url("https://images.unsplash.com/photo-1469854523086-cc02fe5d8dfc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.chat-window {
+  display: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.chat-window.active {
+  display: flex;
+}
+
+/* Navbar active scroll effect */
+nav.scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
