@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visa Assist | Tanzim Travels</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .glass {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-950 text-white font-sans">
+    <!-- Navbar -->
+    <nav
+      class="fixed w-full z-50 transition-all duration-300 py-4 bg-gray-950/80 backdrop-blur-md border-b border-white/10"
+    >
+      <div class="container mx-auto px-6 flex justify-between items-center">
+        <a
+          href="index.html"
+          class="text-2xl font-bold tracking-tighter flex items-center gap-2"
+        >
+          <i class="fas fa-paper-plane text-blue-500"></i>
+          TANZIM TRAVELS
+        </a>
+        <div
+          class="hidden md:flex items-center font-medium text-white w-full"
+          id="navLinks"
+        >
+          <!-- Core Navigation Links -->
+          <div class="flex items-center gap-8">
+            <a href="index.html" class="hover:text-blue-400 transition">Home</a>
+            <a href="contact.html" class="hover:text-blue-400 transition"
+              >Contact</a
+            >
+          </div>
+
+          <!-- Separated Service Buttons -->
+          <div class="flex items-center gap-4 ml-auto">
+            <a
+              href="air-tickets.html"
+              class="flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/20 bg-white/5 hover:bg-blue-600 hover:border-blue-600 hover:text-white transition group"
+            >
+              <i
+                class="fas fa-plane-departure text-blue-500 group-hover:text-white transition"
+              ></i>
+              Air Tickets
+            </a>
+            <a
+              href="hotels.html"
+              class="flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/20 bg-white/5 hover:bg-blue-600 hover:border-blue-600 hover:text-white transition group"
+            >
+              <i
+                class="fas fa-hotel text-blue-500 group-hover:text-white transition"
+              ></i>
+              Hotels
+            </a>
+            <a
+              href="visa-assist.html"
+              class="flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-600 bg-blue-600/10 text-blue-500 transition"
+            >
+              <i class="fas fa-passport"></i> Visa Assist
+            </a>
+          </div>
+
+          <!-- User Profile -->
+          <div class="flex items-center gap-4 ml-8">
+            <div
+              id="userProfile"
+              class="hidden flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full border border-white/20"
+            >
+              <i class="fas fa-user-circle text-blue-400"></i>
+              <span id="userNameDisplay" class="text-sm"></span>
+              <button
+                onclick="logout()"
+                class="ml-2 text-xs text-red-400 hover:text-red-300"
+              >
+                Logout
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-12 px-6 text-center">
+      <h1 class="text-4xl md:text-6xl font-extrabold mb-4">
+        Hassle-Free <span class="text-blue-600">Visa</span>
+      </h1>
+      <p class="text-gray-400 max-w-2xl mx-auto">
+        Let Tanzim Travels simplify your visa application process for any
+        destination worldwide.
+      </p>
+    </section>
+
+    <!-- Visa Services Grid -->
+    <section class="pb-24 px-6">
+      <div
+        class="container mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+      >
+        <!-- Tourist Visa -->
+        <div
+          class="glass p-8 rounded-3xl group hover:border-blue-500/50 transition duration-500 text-center"
+        >
+          <div
+            class="w-20 h-20 bg-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition"
+          >
+            <i class="fas fa-umbrella-beach text-3xl text-blue-500"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-3">Tourist Visa</h3>
+          <p class="text-gray-400 mb-6">
+            Explore the world with ease. We assist with all necessary documents
+            and applications for your leisure trips.
+          </p>
+          <button
+            onclick="handleVisaService('Tourist Visa')"
+            class="w-full py-3 bg-blue-600 rounded-xl font-bold hover:bg-blue-700 transition"
+          >
+            Get Started
+          </button>
+        </div>
+
+        <!-- Business Visa -->
+        <div
+          class="glass p-8 rounded-3xl group hover:border-blue-500/50 transition duration-500 text-center"
+        >
+          <div
+            class="w-20 h-20 bg-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition"
+          >
+            <i class="fas fa-briefcase text-3xl text-blue-500"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-3">Business Visa</h3>
+          <p class="text-gray-400 mb-6">
+            Seamless travel for your business ventures. Expert guidance for
+            meetings, conferences, and corporate trips.
+          </p>
+          <button
+            onclick="handleVisaService('Business Visa')"
+            class="w-full py-3 bg-blue-600 rounded-xl font-bold hover:bg-blue-700 transition"
+          >
+            Get Started
+          </button>
+        </div>
+
+        <!-- Student Visa -->
+        <div
+          class="glass p-8 rounded-3xl group hover:border-blue-500/50 transition duration-500 text-center"
+        >
+          <div
+            class="w-20 h-20 bg-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition"
+          >
+            <i class="fas fa-graduation-cap text-3xl text-blue-500"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-3">Student Visa</h3>
+          <p class="text-gray-400 mb-6">
+            Your academic journey starts here. Comprehensive support for
+            studying abroad, from application to interview prep.
+          </p>
+          <button
+            onclick="handleVisaService('Student Visa')"
+            class="w-full py-3 bg-blue-600 rounded-xl font-bold hover:bg-blue-700 transition"
+          >
+            Get Started
+          </button>
+        </div>
+
+        <!-- Work Visa -->
+        <div
+          class="glass p-8 rounded-3xl group hover:border-blue-500/50 transition duration-500 text-center"
+        >
+          <div
+            class="w-20 h-20 bg-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition"
+          >
+            <i class="fas fa-hard-hat text-3xl text-blue-500"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-3">Work Visa</h3>
+          <p class="text-gray-400 mb-6">
+            Unlock global career opportunities. We guide you through the
+            complexities of international work permits.
+          </p>
+          <button
+            onclick="handleVisaService('Work Visa')"
+            class="w-full py-3 bg-blue-600 rounded-xl font-bold hover:bg-blue-700 transition"
+          >
+            Get Started
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 py-12">
+      <div class="container mx-auto px-6 text-center text-gray-500">
+        <p>&copy; 2024 Tanzim Travels. Your Global Visa Partner.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Check if user is logged in
+      window.onload = function () {
+        const loggedInUser = localStorage.getItem("tanzimUser");
+        if (loggedInUser) {
+          document.getElementById("userProfile").classList.remove("hidden");
+          document.getElementById("userNameDisplay").textContent = loggedInUser;
+        }
+      };
+
+      function handleVisaService(visaType) {
+        const loggedInUser = localStorage.getItem("tanzimUser");
+
+        if (!loggedInUser) {
+          alert("Please login first to inquire about visa services!");
+          window.location.href = "login.html";
+        } else {
+          alert(
+            `Hello ${loggedInUser}! Your inquiry for ${visaType} assistance has been received. Our visa expert will contact you shortly.`,
+          );
+        }
+      }
+
+      function logout() {
+        localStorage.removeItem("tanzimUser");
+        location.reload();
+      }
+    </script>
+  </body>
+</html>
